@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristine Auto Parts - Find Your Part</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Replace the URL below with a link to your chosen background image */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <nav class="bg-white shadow p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-blue-900">FACTORY AUTO PARTS</div>
+        <div class="space-x-4 hidden md:block text-sm font-semibold text-gray-600">
+            <a href="#" class="hover:text-blue-600">HOME</a>
+            <a href="#" class="hover:text-blue-600">ABOUT</a>
+            <a href="#" class="hover:text-blue-600">SERVICES</a>
+            <a href="#" class="hover:text-blue-600">CONTACT</a>
+        </div>
+        <a href="#quote-form" class="bg-yellow-400 text-black px-4 py-2 font-bold rounded shadow hover:bg-yellow-500">GET QUOTE</a>
+    </nav>
+
+    <div class="hero-bg min-h-screen flex items-center justify-center p-6">
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+            
+            <div class="text-white">
+                <h1 class="text-5xl font-bold mb-6">FACTORY AUTO PARTS</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    We are a trusted salvage yard specializing in high-quality used engines and transmissions. We carefully test and source every part to ensure reliable performance. Affordable prices and nationwide shipping make us your go-to destination.
+                </p>
+                <a href="tel:+18005550199" class="bg-yellow-400 text-black px-6 py-3 font-bold rounded shadow text-lg hover:bg-yellow-500">CALL US NOW</a>
+            </div>
+
+            <div id="quote-form" class="bg-white p-8 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Find Your Part</h2>
+                
+                <form action="process.php" method="POST" class="space-y-4">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Year *</label>
+                            <select name="year" id="year-select" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 bg-white">
+                                <option value="" disabled selected>Select</option>
+                                </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Make *</label>
+                            <select name="make" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 bg-white">
+                                <option value="" disabled selected>Select Make</option>
+                                <option value="Acura">Acura</option>
+                                <option value="Audi">Audi</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Chrysler">Chrysler</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ford">Ford</option>
+                                <option value="GMC">GMC</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Kia">Kia</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                                <option value="Other">Other...</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Model *</label>
+                            <input type="text" name="model" required placeholder="e.g. Camry" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-1">Part Needed *</label>
+                        <select name="part_needed" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 bg-white">
+                            <option value="" disabled selected>Select a Part</option>
+                            <option value="Engine">Engine</option>
+                            <option value="Transmission">Transmission</option>
+                            <option value="Airbags">Airbags</option>
+                            <option value="Ignition">Ignition</option>
+                            <option value="Radio/CD/TV Screens">Radio/CD/TV Screens</option>
+                            <option value="Alternator">Alternator</option>
+                            <option value="Starter">Starter</option>
+                            <option value="Axle Assembly">Axle Assembly</option>
+                            <option value="Other">Other...</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-1">Full Name *</label>
+                        <input type="text" name="full_name" required placeholder="John Doe" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Phone Number *</label>
+                            <input type="tel" name="phone" required placeholder="+1 555-0199" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Email Address *</label>
+                            <input type="email" name="email" required placeholder="john@example.com" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded hover:bg-blue-700 transition duration-200 mt-4">
+                        SUBMIT INQUIRY
+                    </button>
+                    <p class="text-xs text-gray-500 mt-4 text-center">We will contact you shortly with availability and pricing.</p>
+                </form>
+
+                <script>
+                    const yearSelect = document.getElementById('year-select');
+                    for (let i = 2026; i >= 1940; i--) {
+                        let option = document.createElement('option');
+                        option.value = i;
+                        option.textContent = i;
+                        yearSelect.appendChild(option);
+                    }
+                </script>
+            </div>
+
+        </div>
+    </div>
+<div class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12 tracking-wide">Our Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-8 rounded shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-center hover:shadow-lg transition-shadow">
+                    <img src="images/engine.png" alt="Engines" class="h-20 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Engines</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        "Essential engine components sourced from reputable suppliers, ensuring optimal performance and reliability for your vehicle."
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-center hover:shadow-lg transition-shadow">
+                    <img src="images/transmission.png" alt="Transmissions" class="h-20 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Transmissions</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        "Dependable transmission parts sourced from trusted suppliers, ensuring smooth gear shifting and optimal performance for your vehicle."
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-center hover:shadow-lg transition-shadow">
+                    <img src="images/suspension.png" alt="Suspension Parts" class="h-20 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Suspension Parts</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        "Durable suspension parts sourced from trusted suppliers, providing stability, comfort, and handling performance for your vehicle."
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-center hover:shadow-lg transition-shadow">
+                    <img src="images/electrical.png" alt="Electrical Parts" class="h-20 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Electrical Parts</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        "Reliable electrical components sourced from reputable suppliers, ensuring safe and efficient operation of your vehicle's electrical system."
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-center hover:shadow-lg transition-shadow">
+                    <img src="images/body.png" alt="Body Parts" class="h-20 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Body Parts</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        "High-quality car body parts sourced from trusted suppliers, offering durability, fit, and finish for your vehicle's repair or restoration needs."
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-center hover:shadow-lg transition-shadow">
+                    <img src="images/interior.png" alt="Interior Parts" class="h-20 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Interior Parts</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        "Quality car interior parts sourced from reputable suppliers, providing comfort, style, and functionality for your vehicle's interior."
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-gray-100 pt-16">
+                <div>
+                    <div class="text-5xl font-extrabold text-gray-800 mb-2 tracking-tighter">2600+</div>
+                    <div class="text-gray-500 font-medium text-sm">Total Inventory</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-extrabold text-gray-800 mb-2 tracking-tighter">800+</div>
+                    <div class="text-gray-500 font-medium text-sm">Happy Customers</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-extrabold text-gray-800 mb-2 tracking-tighter">300+</div>
+                    <div class="text-gray-500 font-medium text-sm">Engines</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-extrabold text-gray-800 mb-2 tracking-tighter">350+</div>
+                    <div class="text-gray-500 font-medium text-sm">Transmissions</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
