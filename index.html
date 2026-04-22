@@ -19,10 +19,29 @@
 
     <nav class="bg-white shadow p-4 flex justify-between items-center fixed w-full top-0 z-50">
         <div class="text-2xl font-bold text-blue-900">FACTORY AUTO PARTS</div>
-        <div class="space-x-4 hidden md:block text-sm font-semibold text-gray-600">
-            <a href="#" class="hover:text-blue-600">HOME</a>
-            <a href="#services" class="hover:text-blue-600">SERVICES</a>
-            <a href="#quote-form" class="hover:text-blue-600">CONTACT</a>
+        <div class="space-x-6 hidden md:flex items-center text-sm font-semibold text-gray-600">
+            <a href="#" class="hover:text-blue-600 uppercase">Home</a>
+            <a href="#" class="hover:text-blue-600 uppercase">About</a>
+            
+            <div class="relative group">
+                <button class="hover:text-blue-600 uppercase flex items-center focus:outline-none">
+                    Services 
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-56 bg-white border border-gray-100 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <a href="engines.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 border-b border-gray-50">Used Engines</a>
+                    <a href="transmissions.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 border-b border-gray-50">Used Transmissions</a>
+                    <a href="suspension.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 border-b border-gray-50">Suspension Parts</a>
+                    <a href="electrical.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 border-b border-gray-50">Electrical Parts</a>
+                    <a href="body.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 border-b border-gray-50">Body Parts</a>
+                    <a href="interior.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 border-b border-gray-50">Interior Parts</a>
+                    <a href="airbags.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600">Airbags & Safety</a>
+                </div>
+            </div>
+
+            <a href="#quote-form" class="hover:text-blue-600 uppercase">Contact</a>
+            <a href="#" class="hover:text-blue-600 uppercase">Privacy Policy</a>
+            <a href="#" class="hover:text-blue-600 uppercase">Terms & Conditions</a>
         </div>
         <a href="#quote-form" class="bg-yellow-400 text-black px-4 py-2 font-bold rounded shadow hover:bg-yellow-500">GET QUOTE</a>
     </nav>
@@ -45,77 +64,61 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">Year *</label>
+                            <label class="block text-xs font-bold text-gray-700 mb-1 uppercase">How Much Old? *</label>
                             <select name="year" id="year-select" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 bg-white">
-                                <option value="" disabled selected>Select</option>
+                                <option value="" disabled selected>Select car year</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">Make *</label>
+                            <label class="block text-xs font-bold text-gray-700 mb-1 uppercase">Which Brand? *</label>
                             <select name="make" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 bg-white">
-                                <option value="" disabled selected>Select Make</option>
+                                <option value="" disabled selected>Select Brand/model</option>
                                 <option value="Acura">Acura</option>
                                 <option value="Audi">Audi</option>
                                 <option value="BMW">BMW</option>
                                 <option value="Chevrolet">Chevrolet</option>
-                                <option value="Chrysler">Chrysler</option>
-                                <option value="Dodge">Dodge</option>
                                 <option value="Ford">Ford</option>
-                                <option value="GMC">GMC</option>
                                 <option value="Honda">Honda</option>
-                                <option value="Hyundai">Hyundai</option>
-                                <option value="Jeep">Jeep</option>
-                                <option value="Kia">Kia</option>
-                                <option value="Lexus">Lexus</option>
-                                <option value="Mercedes-Benz">Mercedes-Benz</option>
-                                <option value="Nissan">Nissan</option>
-                                <option value="Subaru">Subaru</option>
                                 <option value="Toyota">Toyota</option>
-                                <option value="Volkswagen">Volkswagen</option>
                                 <option value="Other">Other...</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb- model"Model *</label>
+                            <label class="block text-xs font-bold text-gray-700 mb-1 uppercase">Model *</label>
                             <input type="text" name="model" required placeholder="e.g. Camry" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-1">Part Needed *</label>
+                        <label class="block text-xs font-bold text-gray-700 mb-1 uppercase">Which Part? *</label>
                         <select name="part_needed" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500 bg-white">
-                            <option value="" disabled selected>Select a Part</option>
+                            <option value="" disabled selected>Select Part</option>
                             <option value="Engine">Engine</option>
                             <option value="Transmission">Transmission</option>
+                            <option value="Suspension">Suspension</option>
                             <option value="Airbags">Airbags</option>
-                            <option value="Ignition">Ignition</option>
-                            <option value="Radio/CD/TV Screens">Radio/CD/TV Screens</option>
-                            <option value="Alternator">Alternator</option>
-                            <option value="Starter">Starter</option>
-                            <option value="Axle Assembly">Axle Assembly</option>
                             <option value="Other">Other...</option>
                         </select>
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-1">Full Name *</label>
-                        <input type="text" name="full_name" required placeholder="John Doe" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                        <label class="block text-xs font-bold text-gray-700 mb-1 uppercase">Full Name *</label>
+                        <input type="text" name="full_name" required placeholder="E.g. John Doe" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">Phone Number *</label>
-                            <input type="tel" name="phone" required placeholder="+1 555-0199" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                            <label class="block text-xs font-bold text-gray-700 mb-1 uppercase">Enter Mobile No *</label>
+                            <input type="tel" name="phone" required placeholder="E.g. +1 300 400 5000" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-1">Email Address *</label>
-                            <input type="email" name="email" required placeholder="john@example.com" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
+                            <label class="block text-xs font-bold text-gray-700 mb-1 uppercase">Email Address *</label>
+                            <input type="email" name="email" required placeholder="E.g. john@doe.com" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
                     
-                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded hover:bg-blue-700 transition duration-200 mt-4">
-                        SUBMIT INQUIRY
+                    <button type="submit" class="w-32 bg-[#3182ce] text-white font-bold py-2 rounded hover:bg-blue-700 transition duration-200 mt-4 text-sm">
+                        SUBMIT
                     </button>
-                    <p class="text-xs text-gray-500 mt-4 text-center">We will contact you shortly with availability and pricing.</p>
                 </form>
 
                 <script>
@@ -138,59 +141,198 @@
             <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12 tracking-wide">Our Services</h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                
                 <a href="engines.html" class="block bg-white p-6 rounded shadow border border-gray-50 text-center hover:shadow-xl hover:border-blue-200 transition duration-300 transform hover:-translate-y-1">
-                    <img src="images/engine.png" alt="Engines" class="h-16 mx-auto mb-4 object-contain">
+                    <img src="https://raw.githubusercontent.com/ghanshyamfale11-afk/FACTORY-AUTOPARTS/main/images/engine.png.jpg" alt="Engines" class="h-16 mx-auto mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Engines</h3>
-                    <p class="text-xs text-gray-500">Tested GM, Ford, RAM, Toyota, Honda, BMW engines.</p>
+                    <p class="text-xs text-gray-500">"Essential engine components sourced from reputable suppliers, ensuring optimal performance and reliability for your vehicle."</p>
                 </a>
 
                 <a href="transmissions.html" class="block bg-white p-6 rounded shadow border border-gray-50 text-center hover:shadow-xl hover:border-blue-200 transition duration-300 transform hover:-translate-y-1">
-                    <img src="images/transmission.png" alt="Transmissions" class="h-16 mx-auto mb-4 object-contain">
+                    <img src="https://raw.githubusercontent.com/ghanshyamfale11-afk/FACTORY-AUTOPARTS/main/images/tranmission.png.jpg" alt="Transmissions" class="h-16 mx-auto mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Transmissions</h3>
-                    <p class="text-xs text-gray-500">Reliable automatic and manual transmissions.</p>
-                </a>
-
-                <a href="airbags.html" class="block bg-white p-6 rounded shadow border border-gray-50 text-center hover:shadow-xl hover:border-blue-200 transition duration-300 transform hover:-translate-y-1">
-                    <img src="images/airbag.png" alt="Airbags" class="h-16 mx-auto mb-4 object-contain">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Airbags</h3>
-                    <p class="text-xs text-gray-500">Undeployed safety modules and clock springs.</p>
+                    <p class="text-xs text-gray-500">"Dependable transmission parts sourced from trusted suppliers, ensuring smooth gear shifting and optimal performance for your vehicle."</p>
                 </a>
 
                 <a href="suspension.html" class="block bg-white p-6 rounded shadow border border-gray-50 text-center hover:shadow-xl hover:border-blue-200 transition duration-300 transform hover:-translate-y-1">
-                    <img src="images/suspension.png" alt="Suspension Parts" class="h-16 mx-auto mb-4 object-contain">
+                    <img src="https://raw.githubusercontent.com/ghanshyamfale11-afk/FACTORY-AUTOPARTS/main/images/suspension.png.jpg" alt="Suspension Parts" class="h-16 mx-auto mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Suspension Parts</h3>
-                    <p class="text-xs text-gray-500">Control arms, struts, shocks, wheel hubs.</p>
+                    <p class="text-xs text-gray-500">"Durable suspension parts sourced from trusted suppliers, providing stability, comfort, and handling performance for your vehicle."</p>
                 </a>
 
                 <a href="electrical.html" class="block bg-white p-6 rounded shadow border border-gray-50 text-center hover:shadow-xl hover:border-blue-200 transition duration-300 transform hover:-translate-y-1">
-                    <img src="images/electrical.png" alt="Electrical Parts" class="h-16 mx-auto mb-4 object-contain">
+                    <img src="https://raw.githubusercontent.com/ghanshyamfale11-afk/FACTORY-AUTOPARTS/main/images/electrical.png.jpg" alt="Electrical Parts" class="h-16 mx-auto mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Electrical Parts</h3>
-                    <p class="text-xs text-gray-500">Alternators, starters, sensors, and ECUs.</p>
+                    <p class="text-xs text-gray-500">"Reliable electrical components sourced from reputable suppliers, ensuring safe and efficient operation of your vehicle's electrical system."</p>
                 </a>
 
                 <a href="body.html" class="block bg-white p-6 rounded shadow border border-gray-50 text-center hover:shadow-xl hover:border-blue-200 transition duration-300 transform hover:-translate-y-1">
-                    <img src="images/body.png" alt="Body Parts" class="h-16 mx-auto mb-4 object-contain">
+                    <img src="https://raw.githubusercontent.com/ghanshyamfale11-afk/FACTORY-AUTOPARTS/main/images/body.png.jpg" alt="Body Parts" class="h-16 mx-auto mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Body Parts</h3>
-                    <p class="text-xs text-gray-500">Hoods, doors, fenders, bumpers, and grilles.</p>
+                    <p class="text-xs text-gray-500">"High-quality car body parts sourced from trusted suppliers, offering durability, fit, and finish for your vehicle's repair or restoration needs."</p>
                 </a>
 
                 <a href="interior.html" class="block bg-white p-6 rounded shadow border border-gray-50 text-center hover:shadow-xl hover:border-blue-200 transition duration-300 transform hover:-translate-y-1">
-                    <img src="images/interior.png" alt="Interior Parts" class="h-16 mx-auto mb-4 object-contain">
+                    <img src="https://raw.githubusercontent.com/ghanshyamfale11-afk/FACTORY-AUTOPARTS/main/images/interior.png.jpg" alt="Interior Parts" class="h-16 mx-auto mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Interior Parts</h3>
-                    <p class="text-xs text-gray-500">Seats, dash assemblies, panels, and trim.</p>
+                    <p class="text-xs text-gray-500">"Quality car interior parts sourced from reputable suppliers, providing comfort, style, and functionality for your vehicle's interior."</p>
+                </a>
+                
+                <a href="airbags.html" class="block bg-white p-6 rounded shadow border border-gray-50 text-center hover:shadow-xl hover:border-blue-200 transition duration-300 transform hover:-translate-y-1">
+                    <div class="h-16 w-16 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-xs">ICON</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Airbags</h3>
+                    <p class="text-xs text-gray-500">"Undeployed safety modules, steering wheel bags, dash bags, and clock springs for all major models."</p>
                 </a>
 
             </div>
+        </div>
+    </div>
 
-            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-gray-100 pt-16">
-                <div><div class="text-5xl font-extrabold text-gray-800 mb-2">2600+</div><div class="text-gray-500 text-sm">Total Inventory</div></div>
-                <div><div class="text-5xl font-extrabold text-gray-800 mb-2">800+</div><div class="text-gray-500 text-sm">Happy Customers</div></div>
-                <div><div class="text-5xl font-extrabold text-gray-800 mb-2">300+</div><div class="text-gray-500 text-sm">Engines</div></div>
-                <div><div class="text-5xl font-extrabold text-gray-800 mb-2">350+</div><div class="text-gray-500 text-sm">Transmissions</div></div>
+    <div class="bg-white py-16 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-16">Testimonials</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div class="text-center">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Jim Doe" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover shadow-md">
+                    <p class="text-gray-600 text-sm mb-4 px-4">"I've been buying auto parts from this company for years, and I've always been impressed with the quality of their products. Their parts are durable, reliable, and priced competitively. Plus, their customer service is top-notch!"</p>
+                    <div class="text-[#3b9f9e] mb-2 text-lg">★★★★★</div>
+                    <h4 class="font-bold text-gray-900">Jim Doe</h4>
+                </div>
+                
+                <div class="text-center">
+                    <img src="https://i.pravatar.cc/150?img=47" alt="Stefanie Willson" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover shadow-md">
+                    <p class="text-gray-600 text-sm mb-4 px-4">"I recently purchased a transmission part from this company for my car, and I couldn't be happier with my purchase. The part was exactly what I needed, and it arrived quickly. I will definitely be buying from them again in the future."</p>
+                    <div class="text-[#3b9f9e] mb-2 text-lg">★★★★★</div>
+                    <h4 class="font-bold text-gray-900">Stefanie Willson</h4>
+                </div>
+
+                <div class="text-center">
+                    <img src="https://i.pravatar.cc/150?img=44" alt="Martha Stew" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover shadow-md">
+                    <p class="text-gray-600 text-sm mb-4 px-4">"I had a great experience buying car body parts from this company. The parts were high-quality and fit my vehicle perfectly. The ordering process was easy, and the parts arrived quickly. I will definitely be a repeat customer!"</p>
+                    <div class="text-[#3b9f9e] mb-2 text-lg">★★★★★</div>
+                    <h4 class="font-bold text-gray-900">Martha Stew</h4>
+                </div>
+
+                <div class="text-center">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Peneloper Smith" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover shadow-md">
+                    <p class="text-gray-600 text-sm mb-4 px-4">"I was a bit hesitant to buy used auto parts, but after reading the reviews, I decided to give this company a try. I'm so glad I did! The part I received was in great condition and worked perfectly. I saved a ton of money compared to buying new. Highly recommend!"</p>
+                    <div class="text-[#3b9f9e] mb-2 text-lg">★★★★★</div>
+                    <h4 class="font-bold text-gray-900">Peneloper Smith</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#fde073] py-20">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            
+            <div>
+                <img src="https://raw.githubusercontent.com/ghanshyamfale11-afk/FACTORY-AUTOPARTS/main/images/suspension.png.jpg" alt="Why Choose Us" class="rounded shadow-xl bg-white p-4 w-full object-cover">
+            </div>
+            
+            <div>
+                <h4 class="text-sm font-bold text-gray-800 mb-2">Why Choose Us?</h4>
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-6 leading-tight">Focus On Getting Our Jobs Done Quickly</h2>
+                <p class="text-gray-700 mb-8 text-sm">"Choosing Factory Auto Parts means choosing quality, reliability, and exceptional customer service. Here's why you should trust us for all your automotive needs:"</p>
+                
+                <ul class="space-y-4 text-gray-800 text-sm">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-[#3b9f9e] mr-3 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        We offer a wide selection of top-quality parts and accessories from trusted brands known for their performance and durability.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-[#3b9f9e] mr-3 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Our team consists of automotive experts who are passionate about cars and are dedicated to helping you find the right parts for your vehicle.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-[#3b9f9e] mr-3 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        With our easy-to-use online platform, you can find and purchase the parts you need from the comfort of your own home, with fast shipping options available.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-[#3b9f9e] mr-3 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        We prioritize customer satisfaction and are committed to providing exceptional customer service. Our knowledgeable team is here to assist you every step of the way.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-[#3b9f9e] mr-3 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        We offer competitive prices on all our products, ensuring that you get the best value for your money.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-[#3b9f9e] mr-3 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Clear communication and updates on service arrival. Whether you're looking for engine parts, brake systems, suspension components, or accessories, we have a wide selection of products to meet your needs.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-800">
+            <div class="flex items-center space-x-4">
+                <svg class="w-8 h-8 text-gray-800" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.207 2.293a1 1 0 00-1.414 0l-8 8a1 1 0 001.414 1.414L5 10.414V17a1 1 0 001 1h8a1 1 0 001-1v-6.586l.793.793a1 1 0 001.414-1.414l-8-8zM11 15H9v-4h2v4z" clip-rule="evenodd"></path></svg>
+                <div>
+                    <h4 class="font-bold text-sm uppercase">Address:</h4>
+                    <p class="text-xs">9606 C F Hawn Fwy<br>Dallas, TX 75217, USA</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <svg class="w-8 h-8 text-gray-800" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                <div>
+                    <h4 class="font-bold text-sm uppercase">Email:</h4>
+                    <p class="text-xs">info@factoryautoparts.store</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <svg class="w-8 h-8 text-gray-800" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                <div>
+                    <h4 class="font-bold text-sm uppercase">Open Hours:</h4>
+                    <p class="text-xs">Mon-Fri: 9am - 6pm EST</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#f4f4f4] py-16">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div>
+                <h4 class="font-bold text-gray-800 mb-6">FACTORY AUTO PARTS LLC</h4>
+                <p class="text-xs text-gray-600 mb-2">9606 C F Hawn Fwy<br>Dallas, TX 75217, USA</p>
+                <p class="text-xs text-gray-600 mb-2 mt-6">info@factoryautoparts.store</p>
+                <p class="text-xs text-gray-600">+1 (800) 555-0199</p>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-gray-800 mb-6">Our Services</h4>
+                <ul class="text-xs text-gray-600 space-y-3">
+                    <li><a href="engines.html" class="hover:text-blue-600">Used Engines</a></li>
+                    <li><a href="transmissions.html" class="hover:text-blue-600">Used Transmissions</a></li>
+                    <li><a href="suspension.html" class="hover:text-blue-600">Suspension Parts</a></li>
+                    <li><a href="body.html" class="hover:text-blue-600">Body Parts</a></li>
+                    <li><a href="electrical.html" class="hover:text-blue-600">Electrical Parts</a></li>
+                    <li><a href="interior.html" class="hover:text-blue-600">Interior Parts</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-gray-800 mb-6">Important Links</h4>
+                <ul class="text-xs text-gray-600 space-y-3">
+                    <li><a href="#" class="hover:text-blue-600">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Refund Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Return Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Shipment Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-gray-800 mb-6">Special</h4>
+                <p class="text-xs text-gray-600">Contact us for bulk orders or hard-to-find components.</p>
             </div>
 
         </div>
-    </div>
+        
+        <div class="max-w-6xl mx-auto px-4 mt-16 pt-8 text-center text-xs text-gray-500">
+            Copyright © 2026 @ FACTORY AUTO PARTS LLC
+        </div>
+    </footer>
+
 </body>
 </html>
