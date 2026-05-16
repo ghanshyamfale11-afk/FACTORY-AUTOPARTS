@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Factory Auto Parts - High Quality Used Engines & Transmissions</title>
 
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18112863021"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,7 +16,7 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-<style>
+  <style>
     html { scroll-behavior: smooth; }
     .hero-bg {
       background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2000&auto=format&fit=crop'); 
@@ -28,7 +29,7 @@
     <header class="fixed w-full top-0 z-50">
       
         <div class="bg-red-600 text-white text-center py-2 px-4 text-xs md:text-sm font-bold tracking-wide shadow-md">
-            🔥 SPECIAL OFFER: Call us now and Get 15-20% off on selected parts<a href="tel:+19045958167" class="text-yellow-300 hover:text-white hover:underline transition-colors" onclick="trackMyConversion()">+1 (214) 225-9650</a>
+            🔥 SPECIAL OFFER: Call us now and Get 15-20% off on selected parts<a href="tel:+19045958167" class="text-yellow-300 hover:text-white hover:underline transition-colors ml-1" onclick="trackMyConversion()">+1 (214) 225-9650</a>
         </div>
      <nav class="bg-white shadow px-4 py-2 flex justify-between items-center">
         <a href="index.html" class="flex items-center shrink-0">
@@ -70,13 +71,15 @@
                 <p class="text-lg mb-8 leading-relaxed text-gray-200">
                     Trusted salvage yard specializing in high-quality used engines and transmissions. Every part is tested to ensure reliable performance. Affordable prices and nationwide shipping.
                 </p>
-                <a href="tel:+1 9045958167" class="bg-yellow-400 text-black px-6 py-3 font-bold rounded shadow text-lg hover:bg-yellow-500">CALL: +1 (214) 225-9650</a>
+                <a href="tel:+1 9045958167" class="bg-yellow-400 text-black px-6 py-3 font-bold rounded shadow text-lg hover:bg-yellow-500" onclick="trackMyConversion()">CALL: +1 (214) 225-9650</a>
             </div>
 
             <div id="quote-form" class="bg-white p-8 rounded-lg shadow-xl">
                 <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Find Your Part</h2>
                 
                 <form action="https://formspree.io/f/mqewggvr" method="POST" class="space-y-4">
+                    <!-- HIDDEN REDIRECT INPUT ADDED HERE -->
+                    <input type="hidden" name="_next" value="https://factoryautoparts.store/thank-you.html">
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
@@ -358,9 +361,10 @@
         <a href="https://ghanshyamfale11-afk.github.io/FACTORY-AUTOPARTS/privacy-policy.html" class="hover:text-white underline">Privacy Policy</a>
     </div>
 </div>
+<!-- CORRECTED CONVERSION TRACKING SCRIPT -->
 <script>
   function trackMyConversion() {
-    gtag('event', 'conversion', {'send_to': 'AW-18112863021/Mj8ICLnbgqEcEK228bxD'});
+    gtag('event', 'conversion', {'send_to': 'AW-18112863021/Mj8ICLnBgqEcEK228bxD'});
   }
 </script>
 </body>
